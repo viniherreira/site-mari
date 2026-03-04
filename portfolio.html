@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio completo de fotografia editorial, retratos e eventos.">
+  <title>Portfólio | Fotografia Editorial</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Ir para a página inicial">
+        <span class="logo-mark">M</span>
+        <span class="logo-text">Michele Araújo</span>
+        <span class="logo-sub">Fotografia Editorial</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="portfolio.html" class="active">Portfólio</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section page-intro">
+      <div class="container">
+        <header class="section-header fade-in">
+          <p class="section-kicker">Portfólio</p>
+          <h1 class="section-title">Ensaios em destaque</h1>
+          <p class="section-subtitle">
+            Uma seleção de projetos que mostram a essência do meu olhar: luz, composição e histórias contadas com elegância.
+          </p>
+        </header>
+
+        <div class="works-grid">
+          <article class="work-card fade-in" style="--delay: 0.05s">
+            <a href="portfolio/trabalho-01.html" class="work-image-link">
+              <img src="img/trabalhos/trabalho-01/capa.jpg" loading="lazy" alt="Capa do trabalho Luz &amp; Silhuetas - placeholder">
+            </a>
+            <div class="work-content">
+              <h2 class="work-title">
+                <a href="portfolio/trabalho-01.html">Luz &amp; Silhuetas</a>
+              </h2>
+              <p class="work-meta">Ensaio editorial | Estúdio</p>
+              <p class="work-description">
+                Contrastes marcados, linhas limpas e uma abordagem quase gráfica da forma humana, em clima intimista.
+              </p>
+              <a href="portfolio/trabalho-01.html" class="text-link">Ver ensaio completo</a>
+            </div>
+          </article>
+
+          <article class="work-card fade-in" style="--delay: 0.1s">
+            <a href="portfolio/trabalho-02.html" class="work-image-link">
+              <img src="img/trabalhos/trabalho-02/capa.jpg" loading="lazy" alt="Capa do trabalho Entre Folhas - placeholder">
+            </a>
+            <div class="work-content">
+              <h2 class="work-title">
+                <a href="portfolio/trabalho-02.html">Entre Folhas</a>
+              </h2>
+              <p class="work-meta">Ensaio lifestyle | Externo</p>
+              <p class="work-description">
+                Retratos suaves em meio à natureza, com cores sóbrias e texturas orgânicas, em ritmo contemplativo.
+              </p>
+              <a href="portfolio/trabalho-02.html" class="text-link">Ver ensaio completo</a>
+            </div>
+          </article>
+
+          <article class="work-card fade-in" style="--delay: 0.15s">
+            <a href="portfolio/trabalho-03.html" class="work-image-link">
+              <img src="img/trabalhos/trabalho-03/capa.jpg" loading="lazy" alt="Capa do trabalho Noite em Movimento - placeholder">
+            </a>
+            <div class="work-content">
+              <h2 class="work-title">
+                <a href="portfolio/trabalho-03.html">Noite em Movimento</a>
+              </h2>
+              <p class="work-meta">Evento | Casamento intimista</p>
+              <p class="work-description">
+                Um casamento noturno traduzido em imagens atemporais, com foco em gestos, detalhes e atmosfera.
+              </p>
+              <a href="portfolio/trabalho-03.html" class="text-link">Ver ensaio completo</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="footer-year"></span> Michele Araújo Fotografia. Todos os direitos reservados.</p>
+      <div class="footer-links">
+        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.behance.net" target="_blank" rel="noopener noreferrer">Behance</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Conversar pelo WhatsApp">
+    <span class="whatsapp-icon"></span>
+  </a>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Fechar imagem">&times;</button>
+    <img src="" alt="Visualização ampliada" class="lightbox-image">
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
