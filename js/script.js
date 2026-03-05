@@ -57,13 +57,23 @@
   });
 })();
 
-// Lightbox simples em JavaScript puro
+// Lightbox simples em JavaScript puro + zoom em todas as fotos
 (function () {
   var lightbox = document.getElementById("lightbox");
   if (!lightbox) return;
 
   var lightboxImage = lightbox.querySelector(".lightbox-image");
   var closeButton = lightbox.querySelector(".lightbox-close");
+
+  // Marcar todas as fotos dentro de <main> como zoomáveis,
+  // exceto as que tiverem a classe .no-zoom (caso queira excluir alguma no futuro)
+  var main = document.querySelector("main");
+  if (main) {
+    var photos = main.querySelectorAll("img:not(.no-zoom)");
+    photos.forEach(function (img) {
+      img.classList.add("js-zoomable-photo");
+    });
+  }
 
   function openLightbox(src, alt) {
     lightboxImage.src = src;
@@ -80,9 +90,10 @@
     lightboxImage.src = "";
   }
 
+  // Clique em qualquer foto marcada como zoomável abre o lightbox
   document.addEventListener("click", function (event) {
     var target = event.target;
-    if (target.matches("img[data-lightbox]")) {
+    if (target.matches("img[data-lightbox], img.js-zoomable-photo")) {
       event.preventDefault();
       openLightbox(target.src, target.alt);
     }

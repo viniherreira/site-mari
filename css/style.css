@@ -132,6 +132,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 24px;
   height: 72px;
 }
 
@@ -164,6 +165,48 @@ main {
 .logo-sub {
   font-size: 0.75rem;
   color: var(--text-muted);
+}
+
+/* Ações no header (redes sociais) */
+
+.header-social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  border: 1px solid var(--border-soft);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background-color 0.18s ease, color 0.18s ease, box-shadow 0.18s ease, transform 0.12s ease;
+}
+
+.header-icon:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.header-icon--whatsapp {
+  color: #128c7e;
+}
+
+.header-icon--instagram {
+  color: #e1306c;
+}
+
+.header-icon--facebook {
+  color: #1877f2;
 }
 
 .main-nav ul {
@@ -301,12 +344,12 @@ main {
   border-radius: 18px;
   overflow: hidden;
   background-color: #f6f0ea;
+  aspect-ratio: 4 / 5;
 }
 
 .work-image-link img {
   width: 100%;
   height: 100%;
-  max-height: 340px;
   object-fit: cover;
   transform: scale(1.01);
   transition: transform 0.6s ease, filter 0.4s ease;
@@ -661,14 +704,23 @@ textarea:focus {
 .work-gallery-item {
   margin: 0;
   padding: 0;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
 }
 
 .work-gallery-item img {
   border-radius: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   border: 2px solid #ffffff;
   box-sizing: border-box;
+  cursor: zoom-in;
+  object-fit: cover;
+}
+
+/* Classe aplicada via JavaScript em todas as fotos dentro de <main> */
+.js-zoomable-photo {
   cursor: zoom-in;
 }
 
@@ -738,8 +790,8 @@ textarea:focus {
   width: 52px;
   height: 52px;
   border-radius: 999px;
-  background-color: #1bd741;
-  box-shadow: 0 24px 40px rgba(27, 215, 65, 0.45);
+  background-color: #25d366;
+  box-shadow: 0 24px 40px rgba(37, 211, 102, 0.45);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -749,7 +801,7 @@ textarea:focus {
 
 .whatsapp-float:hover {
   transform: translateY(-2px);
-  box-shadow: 0 28px 50px rgba(27, 215, 65, 0.6);
+  box-shadow: 0 28px 50px rgba(37, 211, 102, 0.6);
 }
 
 .whatsapp-icon {
@@ -877,6 +929,10 @@ textarea:focus {
 
   .nav-toggle {
     display: inline-flex;
+  }
+
+  .header-social {
+    display: none;
   }
 
   .main-nav {
