@@ -696,16 +696,16 @@ textarea:focus {
 }
 
 .work-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0;
+  column-count: 3;
+  column-gap: 0;
 }
 
 .work-gallery-item {
-  margin: 0;
+  margin: 0 0 0;
   padding: 0;
   position: relative;
   overflow: hidden;
+  break-inside: avoid;
 }
 
 .work-gallery-item img {
@@ -716,6 +716,7 @@ textarea:focus {
   box-sizing: border-box;
   cursor: zoom-in;
   object-fit: cover;
+  display: block;
 }
 
 /* Classe aplicada via JavaScript em todas as fotos dentro de <main> */
@@ -919,6 +920,10 @@ textarea:focus {
   .contact-preview {
     flex-direction: column;
   }
+
+  .work-gallery {
+    column-count: 2;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1008,6 +1013,10 @@ textarea:focus {
   .whatsapp-float {
     right: 18px;
     bottom: 18px;
+  }
+
+  .work-gallery {
+    column-count: 1;
   }
 }
 
