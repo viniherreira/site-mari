@@ -706,13 +706,12 @@ textarea:focus {
   padding: 0;
   position: relative;
   overflow: hidden;
-  aspect-ratio: 3 / 4;
 }
 
 .work-gallery-item img {
   border-radius: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
   border: 2px solid #ffffff;
   box-sizing: border-box;
   cursor: zoom-in;
